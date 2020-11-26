@@ -18,6 +18,11 @@ export async function getCocktailInfo() {
   const drinks = await result.json();
   const drink = drinks.drinks[0];
 
-  const formattedDrink = {};
+  const formattedDrink = {
+    image: drink.strDrinkThumb,
+    name: drink.strDrink,
+    glass: drink.strGlass,
+    instructions: drink.strInstructionsDE,
+  };
   return formattedDrink;
 }
