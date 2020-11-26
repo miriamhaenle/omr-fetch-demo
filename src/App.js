@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
+import styled from 'styled-components/macro';
 import { getHarryPotterCharacter } from './api/fetchData';
 import RickAndMortyCard from './components/RickAndMortyCard';
 import DrinkCard from './components/DrinkCard';
+
+const MainContainer = styled.main`
+  display: flex;
+  flex-flow: row wrap;
+`;
 
 function App() {
   const [harryPotterCharacters, setHarryPotterCharacters] = useState([]);
@@ -15,14 +21,14 @@ function App() {
   }, []);
 
   return (
-    <>
+    <MainContainer>
       <RickAndMortyCard />
       {harryPotterCharacters &&
         harryPotterCharacters.map(() => {
           return 'Hier kommen Harry Potter Characters hin';
         })}
       <DrinkCard />
-    </>
+    </MainContainer>
   );
 }
 
