@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getRickAndMortyCharacter } from '../api/fetchCharacter';
+import { getRickAndMortyCharacter } from '../api/fetchData';
 import styled from 'styled-components/macro';
 
 const CharacterContainer = styled.div`

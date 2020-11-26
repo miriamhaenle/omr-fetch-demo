@@ -1,6 +1,7 @@
-import RickAndMortyCard from './components/RickAndMortyCard';
 import { useEffect, useState } from 'react';
-import { getHarryPotterCharacter } from './api/fetchCharacter';
+import { getHarryPotterCharacter } from './api/fetchData';
+import RickAndMortyCard from './components/RickAndMortyCard';
+import DrinkCard from './components/DrinkCard';
 
 function App() {
   const [harryPotterCharacters, setHarryPotterCharacters] = useState([]);
@@ -20,6 +21,7 @@ function App() {
         harryPotterCharacters.map(() => {
           return 'Hier kommen Harry Potter Characters hin';
         })}
+      <DrinkCard />
     </>
   );
 }
