@@ -47,9 +47,6 @@ export default function DrinkCard() {
           <Instructions>{drink.instructions}</Instructions>
         </DrinkContainer>
       )}
-      <p>
-        Presented by <a href="https://drinkable.app">Drinkable</a>
-      </p>
     </>
   );
 }
