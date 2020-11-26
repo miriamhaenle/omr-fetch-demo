@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getCharacter } from '../api/fetchCharacter';
+import { getRickAndMortyCharacter } from '../api/fetchCharacter';
 import styled from 'styled-components/macro';
 
 const CharacterContainer = styled.div`
@@ -31,7 +31,7 @@ export default function RickAndMortyCard() {
 
   useEffect(() => {
     async function doGet() {
-      const character = await getCharacter();
+      const character = await getRickAndMortyCharacter();
       setCharacter(character);
     }
     doGet();
