@@ -1,5 +1,11 @@
+import RickAndMortyCard from './components/RickAndMortyCard';
+
 function App() {
-  return <div></div>;
+  return (
+    <>
+      <RickAndMortyCard />
+    </>
+  );
 }
 
 export default App;
