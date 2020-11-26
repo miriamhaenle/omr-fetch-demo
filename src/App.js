@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getHarryPotterCharacter } from './api/fetchData';
 import RickAndMortyCard from './components/RickAndMortyCard';
 import DrinkCard from './components/DrinkCard';
+import HarryPotterCard from './components/HarryPotterCard';
 
 function App() {
   const [harryPotterCharacters, setHarryPotterCharacters] = useState([]);
@@ -18,8 +19,8 @@ function App() {
     <>
       <RickAndMortyCard />
       {harryPotterCharacters &&
-        harryPotterCharacters.map(() => {
-          return 'Hier kommen Harry Potter Characters hin';
+        harryPotterCharacters.map((character) => {
+          return <HarryPotterCard character={character} />;
         })}
       <DrinkCard />
     </>
