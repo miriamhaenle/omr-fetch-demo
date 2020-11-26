@@ -41,10 +41,10 @@ export default function RickAndMortyCard() {
     <>
       {character && (
         <CharacterContainer>
-          <Image />
-          <Name></Name>
-          <Species></Species>
-          <Origin></Origin>
+          <Image src={character.image} />
+          <Name>{character.name}</Name>
+          <Species>{character.species}</Species>
+          <Origin>{character.origin.name}</Origin>
         </CharacterContainer>
       )}
     </>
